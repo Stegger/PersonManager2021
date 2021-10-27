@@ -2,24 +2,30 @@ package gui.javafx.studentbrowser;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-public class StudentBrowserController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    private StudentBrowserModel studentBrowserModel;
+public class StudentBrowserController implements Initializable {
 
+    @FXML
+    private ListView lstAllStudents;
     @FXML
     private TextField txtId;
-
     @FXML
     private TextField txtName;
-
     @FXML
     private TextField txtEmail;
 
-    public StudentBrowserController()
-    {
+    private StudentBrowserModel studentBrowserModel;
+
+
+    public StudentBrowserController() {
         studentBrowserModel = new StudentBrowserModel();
+
     }
 
     @FXML
@@ -30,6 +36,13 @@ public class StudentBrowserController {
         String email = txtEmail.getText();
 
         studentBrowserModel.createStudent(id, name, email);
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        lstAllStudents.setItems(studentBrowserModel.getAllStudents());
 
     }
 }
