@@ -1,4 +1,4 @@
-package gui.javafx.studentbrowser;
+package gui.javafx.model;
 
 import be.Person;
 import be.Student;
@@ -16,8 +16,6 @@ public class StudentBrowserModel {
     {
         allStudents = FXCollections.observableArrayList();
     }
-
-
 
     public void createStudent(int id, String name, String email)
     {

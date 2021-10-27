@@ -12,7 +12,8 @@
       <TextField fx:id="txtId" layoutX="88.0" layoutY="89.0" promptText="enter id" />
       <TextField fx:id="txtName" layoutX="88.0" layoutY="136.0" promptText="enter name" />
       <TextField fx:id="txtEmail" layoutX="88.0" layoutY="188.0" promptText="enter email" />
-      <Button layoutX="137.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleCreateStudent" text="Button" />
+      <Button defaultButton="true" layoutX="137.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleCreateStudent" text="ADD" />
       <ListView fx:id="lstAllStudents" layoutX="324.0" layoutY="25.0" prefHeight="318.0" prefWidth="253.0" />
+      <Button layoutX="137.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleNext" text="ext" />
    </children>
 </AnchorPane>
