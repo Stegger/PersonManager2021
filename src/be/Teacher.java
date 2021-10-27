@@ -37,6 +37,10 @@ public class Teacher extends Person {
     }
 
 
+    @Override
+    public void doSomething() {
+        System.out.println("Teach");
+    }
 
     @Override
     public String toString() {

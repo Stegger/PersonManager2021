@@ -57,6 +57,12 @@ public class Student extends Person {
         gradeReport.add(gradeInfo);
     }
 
+
+    @Override
+    public void doSomething() {
+        System.out.println("Study");
+    }
+
     @Override
     public String toString() {
         return super.toString() + String.format("%-20s %-20s", education, getAverageGrade());

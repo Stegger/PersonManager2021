@@ -18,8 +18,6 @@ public class StudentBrowserModel {
 
     public void createStudent(int id, String name, String email)
     {
-        Person person = new Person(id, name);
-        allStudents.add(person);
     }
 
 }

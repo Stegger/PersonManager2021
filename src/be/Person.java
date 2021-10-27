@@ -1,6 +1,6 @@
 package be;
 
-public class Person {
+public abstract class Person {
 
     private int id;
     private String name;
@@ -11,6 +11,9 @@ public class Person {
         this.id = id;
         this.name = name;
     }
+
+    public abstract void doSomething();
+
 
     public int getId() {
         return id;

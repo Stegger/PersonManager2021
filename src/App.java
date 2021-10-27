@@ -9,18 +9,13 @@ public class App {
 
     public static void main(String[] args) {
 
-        Person peter = new Person(1, "Peter");
-        Person thomas = new Person(2, "Thomas");
-        Person trine = new Person(3, "Trine");
         Person ib = new Student(5, "Ib", "MMD");
         Student studentIb = (Student) ib;
 
         studentIb.setEducation("DMU");
 
         ArrayList<Person> persons = new ArrayList<>();
-        persons.add(peter);
-        persons.add(thomas);
-        persons.add(trine);
+
 
         Teacher jeppe = new Teacher(4, "Jeppe", "JML");
         jeppe.addSubject("SCO");
@@ -37,6 +32,7 @@ public class App {
         System.out.println(header);
         for (Person p : persons) {
             System.out.println(p);
+            p.doSomething();
         }
 
     }
