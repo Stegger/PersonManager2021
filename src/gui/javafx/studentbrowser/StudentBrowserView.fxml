@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="369.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.javafx.studentbrowser.StudentBrowserController">
+   <children>
+      <Separator layoutX="283.0" layoutY="89.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="34.0" />
+      <TextField fx:id="txtId" layoutX="88.0" layoutY="89.0" promptText="enter id" />
+      <TextField fx:id="txtName" layoutX="88.0" layoutY="136.0" promptText="enter name" />
+      <TextField fx:id="txtEmail" layoutX="88.0" layoutY="188.0" promptText="enter email" />
+      <Button layoutX="137.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleCreateStudent" text="Button" />
+   </children>
+</AnchorPane>
