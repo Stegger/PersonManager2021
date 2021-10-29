@@ -32,6 +32,8 @@ public class StudentMenu extends Menu {
                 }
                 System.out.println("Done in StudentMenu");
                 break;
+            case 3:
+                new StudentSearchMenu(personManager).run();
             default:
                 System.out.println("What?");
 

@@ -45,6 +45,20 @@ public class PersonManager {
         return null;
     }
 
+    public List<Student> searchForStudent(IStudentSearch iStudentSearch)
+    {
+        List<Student> searchResult = new ArrayList<>();
+
+        for(Student s : getAllStudents())
+        {
+            if(iStudentSearch.evaluateStudent(s))
+                searchResult.add(s);
+        }
+
+        return searchResult;
+    }
+
+
     public Person getPersonBinary(int id) {
         allPersons.sort((o1, o2) -> o1.getId() - o2.getId());
 

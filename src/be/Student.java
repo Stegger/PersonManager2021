@@ -9,7 +9,7 @@ public class Student extends Person {
     private String education;
 
     public Student(int id, String name, String email, String education) {
-        super(id, email, name);
+        super(id, name, email);
         this.education = education;
         gradeReport = new ArrayList<>();
     }
