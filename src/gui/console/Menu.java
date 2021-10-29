@@ -1,5 +1,7 @@
 package gui.console;
 
+import java.util.Scanner;
+
 public abstract class Menu {
 
     // value used to exit the menu.
@@ -44,8 +46,7 @@ public abstract class Menu {
             int option = getOption();
             if (option == EXIT_OPTION) {
                 done = true;
-            } else
-            {
+            } else {
                 doAction(option);
             }
         }
@@ -59,8 +60,9 @@ public abstract class Menu {
      * @return A valid menu option.
      */
     private int getOption() {
-        
-        return 0; // Dummy value.
+        Scanner in = new Scanner(System.in);
+        int result = in.nextInt();
+        return result;
     }
 
     /**
@@ -73,9 +75,8 @@ public abstract class Menu {
      */
     private void showMenu() {
         System.out.println(header);
-        for(int i = 0; i < menuItems.length; i++)
-        {
-            System.out.println((i+1) + ": " + menuItems[i]);
+        for (int i = 0; i < menuItems.length; i++) {
+            System.out.println((i + 1) + ": " + menuItems[i]);
         }
         System.out.println(EXIT_OPTION + ": Exit");
     }
@@ -90,6 +91,8 @@ public abstract class Menu {
      * Clears the screen by writing several empty lines.
      */
     protected void clear() {
+        for (int i = 0; i < 25; i++)
+            System.out.println();
     }
 }
 

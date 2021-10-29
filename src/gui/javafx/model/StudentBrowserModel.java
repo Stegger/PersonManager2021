@@ -19,7 +19,7 @@ public class StudentBrowserModel {
 
     public void createStudent(int id, String name, String email)
     {
-        allStudents.add(new Student(id,name, "CS"));
+        //allStudents.add(new Student(id,name, "CS"));
     }
 
     public ObservableList getAllStudents()

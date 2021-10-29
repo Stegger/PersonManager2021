@@ -8,8 +8,8 @@ public class Student extends Person {
     private List<GradeInfo> gradeReport;
     private String education;
 
-    public Student(int id, String name, String education) {
-        super(id, name);
+    public Student(int id, String name, String email, String education) {
+        super(id, email, name);
         this.education = education;
         gradeReport = new ArrayList<>();
     }
