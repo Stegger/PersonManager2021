@@ -42,9 +42,11 @@ public abstract class Menu {
         while (!done) {
             showMenu();
             int option = getOption();
-            doAction(option);
             if (option == EXIT_OPTION) {
                 done = true;
+            } else
+            {
+                doAction(option);
             }
         }
     }
@@ -57,6 +59,7 @@ public abstract class Menu {
      * @return A valid menu option.
      */
     private int getOption() {
+        
         return 0; // Dummy value.
     }
 
@@ -69,6 +72,12 @@ public abstract class Menu {
      * options in the menu.
      */
     private void showMenu() {
+        System.out.println(header);
+        for(int i = 0; i < menuItems.length; i++)
+        {
+            System.out.println((i+1) + ": " + menuItems[i]);
+        }
+        System.out.println(EXIT_OPTION + ": Exit");
     }
 
     /**
